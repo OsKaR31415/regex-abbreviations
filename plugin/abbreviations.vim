@@ -19,7 +19,6 @@ fun! CompleteAbbreviation()
     return g:regex_abbreviations#expand_symbol
 endfun
 
-
 fun! AddAbbreviation(regex, output, ...)
     " add an abreviation to the abbreviations list
     " a:regex is the regex that neds to be matched
@@ -37,7 +36,5 @@ fun! AddAbbreviation(regex, output, ...)
     endif
 endfun
 
-
 " map the symbol to complete abbreviations
 exe "inoremap " . g:regex_abbreviations#expand_symbol . " <C-R>=CompleteAbbreviation()<cr>"
-
